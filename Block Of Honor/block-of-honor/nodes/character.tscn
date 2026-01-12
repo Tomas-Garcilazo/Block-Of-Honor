@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cn3r10euf1pja" path="res://nodes/gun_1.tscn" id="1_bcywq"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_wa5vi"]
+size = Vector3(0.5, 0.75, 0.25)
+
 [sub_resource type="BoxMesh" id="BoxMesh_vu45j"]
 size = Vector3(0.5, 0.5, 0.5)
 
@@ -11,16 +14,13 @@ size = Vector3(0.25, 0.375, 0.25)
 [sub_resource type="BoxMesh" id="BoxMesh_pjt0s"]
 size = Vector3(0.25, 0.375, 0.25)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wa5vi"]
-size = Vector3(0.5, 0.75, 0.25)
-
 [sub_resource type="Animation" id="Animation_bcywq"]
 resource_name = "no animation"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck_pivot:position")
+tracks/0/path = NodePath("torso/neck_pivot:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -32,7 +32,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("shoulders pivot:position")
+tracks/1/path = NodePath("torso/shoulders pivot:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -44,7 +44,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("shoulders pivot/R arm pivot:position")
+tracks/2/path = NodePath("torso/shoulders pivot/R arm pivot:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -56,7 +56,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot:position")
+tracks/3/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -68,7 +68,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot/gun pivot:position")
+tracks/4/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot/gun pivot:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -80,7 +80,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("shoulders pivot/L arm pivot:position")
+tracks/5/path = NodePath("torso/shoulders pivot/L arm pivot:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -92,7 +92,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("shoulders pivot/L arm pivot/L forearm pivot:position")
+tracks/6/path = NodePath("torso/shoulders pivot/L arm pivot/L forearm pivot:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -104,7 +104,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("hip pivot:position")
+tracks/7/path = NodePath("torso/hip pivot:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -116,7 +116,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("hip pivot/R thigh pivot:position")
+tracks/8/path = NodePath("torso/hip pivot/R thigh pivot:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -128,7 +128,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("hip pivot/R thigh pivot/R leg pivot:position")
+tracks/9/path = NodePath("torso/hip pivot/R thigh pivot/R leg pivot:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -140,7 +140,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("hip pivot/L thigh pivot:position")
+tracks/10/path = NodePath("torso/hip pivot/L thigh pivot:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -152,7 +152,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("hip pivot/L thigh pivot/L leg pivot:position")
+tracks/11/path = NodePath("torso/hip pivot/L thigh pivot/L leg pivot:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -164,7 +164,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("neck_pivot:rotation")
+tracks/12/path = NodePath("torso/neck_pivot:rotation")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -176,7 +176,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("shoulders pivot:rotation")
+tracks/13/path = NodePath("torso/shoulders pivot:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -188,7 +188,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("shoulders pivot/R arm pivot:rotation")
+tracks/14/path = NodePath("torso/shoulders pivot/R arm pivot:rotation")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -200,7 +200,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot:rotation")
+tracks/15/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -212,7 +212,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot/gun pivot:rotation")
+tracks/16/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot/gun pivot:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -224,7 +224,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("shoulders pivot/L arm pivot:rotation")
+tracks/17/path = NodePath("torso/shoulders pivot/L arm pivot:rotation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -236,7 +236,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("shoulders pivot/L arm pivot/L forearm pivot:rotation")
+tracks/18/path = NodePath("torso/shoulders pivot/L arm pivot/L forearm pivot:rotation")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -248,7 +248,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("hip pivot:rotation")
+tracks/19/path = NodePath("torso/hip pivot:rotation")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -260,7 +260,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("hip pivot/R thigh pivot:rotation")
+tracks/20/path = NodePath("torso/hip pivot/R thigh pivot:rotation")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -272,7 +272,7 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("hip pivot/R thigh pivot/R leg pivot:rotation")
+tracks/21/path = NodePath("torso/hip pivot/R thigh pivot/R leg pivot:rotation")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -284,7 +284,7 @@ tracks/21/keys = {
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("hip pivot/L thigh pivot:rotation")
+tracks/22/path = NodePath("torso/hip pivot/L thigh pivot:rotation")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -296,7 +296,7 @@ tracks/22/keys = {
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("hip pivot/L thigh pivot/L leg pivot:rotation")
+tracks/23/path = NodePath("torso/hip pivot/L thigh pivot/L leg pivot:rotation")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -312,7 +312,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("neck_pivot:position")
+tracks/0/path = NodePath("torso/neck_pivot:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -324,7 +324,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("shoulders pivot:position")
+tracks/1/path = NodePath("torso/shoulders pivot:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -336,7 +336,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("shoulders pivot/R arm pivot:position")
+tracks/2/path = NodePath("torso/shoulders pivot/R arm pivot:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -348,7 +348,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot:position")
+tracks/3/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -360,7 +360,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot/gun pivot:position")
+tracks/4/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot/gun pivot:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -372,7 +372,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("shoulders pivot/L arm pivot:position")
+tracks/5/path = NodePath("torso/shoulders pivot/L arm pivot:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -384,7 +384,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("shoulders pivot/L arm pivot/L forearm pivot:position")
+tracks/6/path = NodePath("torso/shoulders pivot/L arm pivot/L forearm pivot:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -396,7 +396,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("hip pivot:position")
+tracks/7/path = NodePath("torso/hip pivot:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -408,7 +408,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("hip pivot/R thigh pivot:position")
+tracks/8/path = NodePath("torso/hip pivot/R thigh pivot:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -420,7 +420,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("hip pivot/R thigh pivot/R leg pivot:position")
+tracks/9/path = NodePath("torso/hip pivot/R thigh pivot/R leg pivot:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -432,7 +432,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("hip pivot/L thigh pivot:position")
+tracks/10/path = NodePath("torso/hip pivot/L thigh pivot:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -444,7 +444,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("hip pivot/L thigh pivot/L leg pivot:position")
+tracks/11/path = NodePath("torso/hip pivot/L thigh pivot/L leg pivot:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -456,7 +456,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("neck_pivot:rotation")
+tracks/12/path = NodePath("torso/neck_pivot:rotation")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -468,7 +468,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("shoulders pivot:rotation")
+tracks/13/path = NodePath("torso/shoulders pivot:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -480,7 +480,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("shoulders pivot/R arm pivot:rotation")
+tracks/14/path = NodePath("torso/shoulders pivot/R arm pivot:rotation")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -492,7 +492,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot:rotation")
+tracks/15/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -504,7 +504,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("shoulders pivot/R arm pivot/R forearm pivot/gun pivot:rotation")
+tracks/16/path = NodePath("torso/shoulders pivot/R arm pivot/R forearm pivot/gun pivot:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -516,7 +516,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("shoulders pivot/L arm pivot:rotation")
+tracks/17/path = NodePath("torso/shoulders pivot/L arm pivot:rotation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -528,7 +528,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("shoulders pivot/L arm pivot/L forearm pivot:rotation")
+tracks/18/path = NodePath("torso/shoulders pivot/L arm pivot/L forearm pivot:rotation")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -540,7 +540,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("hip pivot:rotation")
+tracks/19/path = NodePath("torso/hip pivot:rotation")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -552,7 +552,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("hip pivot/R thigh pivot:rotation")
+tracks/20/path = NodePath("torso/hip pivot/R thigh pivot:rotation")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -564,7 +564,7 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("hip pivot/R thigh pivot/R leg pivot:rotation")
+tracks/21/path = NodePath("torso/hip pivot/R thigh pivot/R leg pivot:rotation")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -576,7 +576,7 @@ tracks/21/keys = {
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("hip pivot/L thigh pivot:rotation")
+tracks/22/path = NodePath("torso/hip pivot/L thigh pivot:rotation")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -588,7 +588,7 @@ tracks/22/keys = {
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("hip pivot/L thigh pivot/L leg pivot:rotation")
+tracks/23/path = NodePath("torso/hip pivot/L thigh pivot/L leg pivot:rotation")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -606,101 +606,101 @@ _data = {
 
 [node name="Node3D" type="Node3D"]
 
-[node name="neck_pivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="head" type="MeshInstance3D" parent="neck_pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-mesh = SubResource("BoxMesh_vu45j")
-skeleton = NodePath("../..")
-metadata/_edit_lock_ = true
-
-[node name="shoulders pivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="R arm pivot" type="Node3D" parent="shoulders pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, 0, 0)
-
-[node name="R arm" type="MeshInstance3D" parent="shoulders pivot/R arm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
-mesh = SubResource("BoxMesh_bcywq")
-skeleton = NodePath("../../..")
-metadata/_edit_lock_ = true
-
-[node name="R forearm pivot" type="Node3D" parent="shoulders pivot/R arm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
-
-[node name="R forearm" type="MeshInstance3D" parent="shoulders pivot/R arm pivot/R forearm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
-mesh = SubResource("BoxMesh_pjt0s")
-skeleton = NodePath("../../../..")
-metadata/_edit_lock_ = true
-
-[node name="gun pivot" type="Node3D" parent="shoulders pivot/R arm pivot/R forearm pivot"]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 0, -0.25, -0.125)
-
-[node name="handle" parent="shoulders pivot/R arm pivot/R forearm pivot/gun pivot" instance=ExtResource("1_bcywq")]
-skeleton = NodePath("../../../../..")
-
-[node name="L arm pivot" type="Node3D" parent="shoulders pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375, 0, 0)
-
-[node name="L arm" type="MeshInstance3D" parent="shoulders pivot/L arm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
-mesh = SubResource("BoxMesh_bcywq")
-skeleton = NodePath("../../..")
-metadata/_edit_lock_ = true
-
-[node name="L forearm pivot" type="Node3D" parent="shoulders pivot/L arm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
-
-[node name="L forearm" type="MeshInstance3D" parent="shoulders pivot/L arm pivot/L forearm pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
-mesh = SubResource("BoxMesh_pjt0s")
-skeleton = NodePath("../../../..")
-metadata/_edit_lock_ = true
-
 [node name="torso" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0)
 mesh = SubResource("BoxMesh_wa5vi")
 
-[node name="hip pivot" type="Node3D" parent="."]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.75, 0)
+[node name="neck_pivot" type="Node3D" parent="torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
 
-[node name="R thigh pivot" type="Node3D" parent="hip pivot"]
+[node name="head" type="MeshInstance3D" parent="torso/neck_pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("BoxMesh_vu45j")
+skeleton = NodePath("../../..")
+metadata/_edit_lock_ = true
+
+[node name="shoulders pivot" type="Node3D" parent="torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
+
+[node name="R arm pivot" type="Node3D" parent="torso/shoulders pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, 0, 0)
+
+[node name="R arm" type="MeshInstance3D" parent="torso/shoulders pivot/R arm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
+mesh = SubResource("BoxMesh_bcywq")
+skeleton = NodePath("../../../..")
+metadata/_edit_lock_ = true
+
+[node name="R forearm pivot" type="Node3D" parent="torso/shoulders pivot/R arm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
+
+[node name="R forearm" type="MeshInstance3D" parent="torso/shoulders pivot/R arm pivot/R forearm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
+mesh = SubResource("BoxMesh_pjt0s")
+skeleton = NodePath("../../../../..")
+metadata/_edit_lock_ = true
+
+[node name="gun pivot" type="Node3D" parent="torso/shoulders pivot/R arm pivot/R forearm pivot"]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 0, -0.25, -0.125)
+
+[node name="handle" parent="torso/shoulders pivot/R arm pivot/R forearm pivot/gun pivot" instance=ExtResource("1_bcywq")]
+skeleton = NodePath("../../../../../..")
+
+[node name="L arm pivot" type="Node3D" parent="torso/shoulders pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375, 0, 0)
+
+[node name="L arm" type="MeshInstance3D" parent="torso/shoulders pivot/L arm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
+mesh = SubResource("BoxMesh_bcywq")
+skeleton = NodePath("../../../..")
+metadata/_edit_lock_ = true
+
+[node name="L forearm pivot" type="Node3D" parent="torso/shoulders pivot/L arm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
+
+[node name="L forearm" type="MeshInstance3D" parent="torso/shoulders pivot/L arm pivot/L forearm pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
+mesh = SubResource("BoxMesh_pjt0s")
+skeleton = NodePath("../../../../..")
+metadata/_edit_lock_ = true
+
+[node name="hip pivot" type="Node3D" parent="torso"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -0.375, 0)
+
+[node name="R thigh pivot" type="Node3D" parent="torso/hip pivot"]
 transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0.125, 0, 0)
 
-[node name="R thigh" type="MeshInstance3D" parent="hip pivot/R thigh pivot"]
+[node name="R thigh" type="MeshInstance3D" parent="torso/hip pivot/R thigh pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
 mesh = SubResource("BoxMesh_bcywq")
-skeleton = NodePath("../../..")
-metadata/_edit_lock_ = true
-
-[node name="R leg pivot" type="Node3D" parent="hip pivot/R thigh pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
-
-[node name="R leg" type="MeshInstance3D" parent="hip pivot/R thigh pivot/R leg pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
-mesh = SubResource("BoxMesh_pjt0s")
 skeleton = NodePath("../../../..")
 metadata/_edit_lock_ = true
 
-[node name="L thigh pivot" type="Node3D" parent="hip pivot"]
+[node name="R leg pivot" type="Node3D" parent="torso/hip pivot/R thigh pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
+
+[node name="R leg" type="MeshInstance3D" parent="torso/hip pivot/R thigh pivot/R leg pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
+mesh = SubResource("BoxMesh_pjt0s")
+skeleton = NodePath("../../../../..")
+metadata/_edit_lock_ = true
+
+[node name="L thigh pivot" type="Node3D" parent="torso/hip pivot"]
 transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, -0.125, 0, 0)
 
-[node name="L thigh" type="MeshInstance3D" parent="hip pivot/L thigh pivot"]
+[node name="L thigh" type="MeshInstance3D" parent="torso/hip pivot/L thigh pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
 mesh = SubResource("BoxMesh_bcywq")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../..")
 metadata/_edit_lock_ = true
 
-[node name="L leg pivot" type="Node3D" parent="hip pivot/L thigh pivot"]
+[node name="L leg pivot" type="Node3D" parent="torso/hip pivot/L thigh pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, 0)
 
-[node name="L leg" type="MeshInstance3D" parent="hip pivot/L thigh pivot/L leg pivot"]
+[node name="L leg" type="MeshInstance3D" parent="torso/hip pivot/L thigh pivot/L leg pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.187, 0)
 mesh = SubResource("BoxMesh_pjt0s")
-skeleton = NodePath("../../../..")
+skeleton = NodePath("../../../../..")
 metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
