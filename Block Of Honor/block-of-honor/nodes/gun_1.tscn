@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn3r10euf1pja"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wdpcj"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_oul47"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 1.2
+
+[node name="handle" type="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_wdpcj")
+skeleton = NodePath("../..")
+
+[node name="gun" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.2, 0.1, 0)
+mesh = SubResource("CylinderMesh_oul47")
